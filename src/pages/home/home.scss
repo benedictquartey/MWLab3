@@ -1,3 +1,79 @@
 page-home {
 
 }
+
+
+    //normal min-width for phones is 480px, this value adjusted for personal settings on nexus 6p
+    @media screen and (min-width: 564px) {
+      
+      .largeView {
+          margin:auto;
+          //display: inline-block;
+            
+        }
+        .mobileView {
+            display: none;
+        }
+      
+    }
+    
+    .foodCardWeb{
+    width: 250px;
+    display: inline-block;
+    
+    }
+    
+    
+ 
+    
+    // if screen accessing app is a small one or mobile, ie; screen width is below 546px show the mobile view
+    @media screen and (max-width: 564px) {
+        .largeView {
+    
+          display: none;
+            
+        }
+        
+    }
+    
+    .mobileView {
+        
+        ion-card {
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+            
+          }
+
+       
+          
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+            
+          }
+    }
+    
+    .footer {
+        position: fixed;
+        right: 0;
+        bottom: 0%;
+        left: 0;
+      
+       background-color:rgba(100,100,100,0);
+        text-align: center;
+      }
+
+     

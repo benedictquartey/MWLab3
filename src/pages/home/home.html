@@ -1,18 +1,234 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+
+    <ion-navbar>
+        <ion-title>Courseware </ion-title>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-chip style=" text-transform: capitalize">
+                    <ion-label>Ashesi University</ion-label>
+                  </ion-chip>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+
+
+
+
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/userProfile.jpg">
+            </ion-avatar>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+            <!-- badge showing the number of items in cart ie n0 of items customer ordered -->
+            <ion-badge color="danger" item-end>ID: 15428010</ion-badge>
+
+            <ion-label style="border-left: 2px solid #00867d;
+              padding-left: 10px;font-family: 'Courier', Times, serif;">
+                <h3>Computer Science</h3>
+                <p>
+                    Fall Semester
+
+                </p>
+
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+    <!-- Containing div of food cards, centers and arranges large view elements -->
+    <div class="largeView" style=" width:90%; text-align:center">
+
+        <!-- Algorithm card -->
+        <ion-card class="foodCardWeb" (click)="openModal('Algorithm Design','assets/img/algorithm.jpg')">
+            <img src="assets/img/algorithm.jpg">
+            <ion-card-content>
+                <ion-card-title>
+                    Algorithm Desgin
+                </ion-card-title>
+                <p style="font-family: 'Courier', Times, serif;">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col></ion-col>
+                            <ion-col>49 seats</ion-col>
+                            <ion-col></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+        <!-- mobile web card -->
+        <ion-card class="foodCardWeb" (click)="openModal('Mobile Web','assets/img/mobile.jpg')">
+            <img src="assets/img/mobile.jpg">
+            <ion-card-content>
+                <ion-card-title>
+                    Mobile Web
+                </ion-card-title>
+                <p style="font-family: 'Courier', Times, serif;">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col></ion-col>
+                            <ion-col>40 seats</ion-col>
+                            <ion-col></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+        <!-- Robotics card -->
+        <ion-card class="foodCardWeb" (click)="openModal('Robotics','assets/img/robotics.jpg')">
+            <img src="assets/img/robotics.jpg">
+            <ion-card-content>
+                <ion-card-title>
+                    Robotics
+                </ion-card-title>
+                <p style="font-family: 'Courier', Times, serif;">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col></ion-col>
+                            <ion-col>29 seats</ion-col>
+                            <ion-col></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+        <!-- Operating System card -->
+        <ion-card class="foodCardWeb" (click)="openModal('Operating System','assets/img/os.jpg')">
+            <img src="assets/img/os.jpg">
+            <ion-card-content>
+                <ion-card-title>
+                    Operating Systems
+                </ion-card-title>
+                <p style="font-family: 'Courier', Times, serif;">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col></ion-col>
+                            <ion-col>35 seats</ion-col>
+                            <ion-col></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- mobile view elements -->
+    <div class="mobileView">
+        <!-- Algorithm card -->
+        <ion-card class="foodCard" (click)="openModal('Algorithm Design','assets/img/algorithm.jpg')">
+            <ion-slides>
+                <ion-slide>
+                    <img src="assets/img/algorithm.jpg" />
+                    <div class="card-title">Algorithm Design</div>
+                    <div class="card-subtitle">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col>
+                                    40 Seats</ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </ion-card>
+
+
+        <!-- Os card -->
+        <ion-card class="foodCard" (click)="openModal('Operating Systems','assets/img/mobile.jpg')">
+            <ion-slides>
+                <ion-slide>
+                    <img src="assets/img/mobile.jpg" />
+                    <div class="card-title">Mobile Web</div>
+                    <div class="card-subtitle">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col>
+                                    60 Seats</ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </ion-card>
+
+
+        <!-- Robotics -->
+        <ion-card class="foodCard" (click)="openModal('Robotics','assets/img/robotics.jpg')">
+            <ion-slides>
+                <ion-slide>
+                    <img src="assets/img/robotics.jpg" />
+                    <div class="card-title">Robotics </div>
+                    <div class="card-subtitle">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col>
+                                    29 Seats</ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </ion-card>
+
+
+        <!-- Mobile Web-->
+        <ion-card class="foodCard" (click)="openModal('Mobile Web','assets/img/os.jpg')">
+            <ion-slides>
+                <ion-slide>
+                    <img src="assets/img/os.jpg" />
+                    <div class="card-title">Operating Systems</div>
+                    <div class="card-subtitle">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col>
+                                    35 Seats</ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </ion-card>
+
+
+
+
+        <!-- grid the keeps format of lower buttons -->
+
+
+
+
+    </div>
+
+
+
+
+    <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
 </ion-content>
+
+<ion-footer style="text-align:center; background-color: red">
+    <ion-toolbar>
+        <p>©Ashesi University College</p>
+    </ion-toolbar>
+
+
+
+</ion-footer>

@@ -1,23 +1,82 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar>
+      <ion-title>
+         Conversations
+      </ion-title>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-chip style=" text-transform: capitalize">
+                    <ion-label>Ashesi University</ion-label>
+                  </ion-chip>
+            </button>
+          </ion-buttons>
+    </ion-navbar>
 
-<ion-content>
+  </ion-header>
+  
+  <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
+      <ion-item>
+          <ion-avatar item-start>
+              <img src="assets/img/barrett.jpg">
+            </ion-avatar>
+  
+              <!-- badge showing the number of items in cart ie n0 of items customer ordered -->
+            <ion-badge color="secondary" item-end>Read</ion-badge>  
+  
+            <ion-label  style="border-left: 2px solid #00867d;
+            padding-left: 10px;font-family: 'Courier', Times, serif;">
+              <h3>Algorithms FI</h3>
+              <p>
+                Mrs. Juliet Armah 
+              
+              </p>
+              <p> Message: Could you please submit your labs</p>
+              
+            </ion-label>
+          </ion-item>
+
+              <ion-item>
+                  <ion-avatar item-start>
+                      <img src="assets/img/avatar-rey.png">
+                    </ion-avatar>
+          
+                      <!-- badge showing the number of items in cart ie n0 of items customer ordered -->
+                    <ion-badge color="danger" item-end>Unread</ion-badge>  
+          
+                    <ion-label  style="border-left: 2px solid red;
+                    padding-left: 10px;font-family: 'Courier', Times, serif;">
+                      <h3>Robotics Lecturer</h3>
+                      <p>
+                      Dr. Ayorkor Korsah  </p>
+                        <p> Message: Kindly send me all your details for the fund</p>
+                      
+                    </ion-label>
+                  </ion-item>
+
+                    
+          <ion-item>
+              <ion-avatar item-start>
+                  <img src="assets/img/avatar-finn.png">
+                </ion-avatar>
+      
+                  <!-- badge showing the number of items in cart ie n0 of items customer ordered -->
+                <ion-badge color="sent" item-end>Sent</ion-badge>  
+      
+                <ion-label  style="border-left: 2px solid #0d7a7e;
+                padding-left: 10px;font-family: 'Courier', Times, serif;">
+                  <h3>Mobile Web FI</h3>
+                  <p>
+                  Mr. Hudson Lekunze  </p>
+                    <p> Message: I would like to request for an extension</p>
+                  
+                </ion-label>
+              </ion-item>
+  
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
-</ion-content>
+  
+  </ion-content>
+  

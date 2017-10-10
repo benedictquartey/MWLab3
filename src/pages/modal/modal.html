@@ -1,0 +1,95 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{pageName}} </ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+            <ion-chip style=" text-transform: capitalize">
+                <ion-label>Ashesi University</ion-label>
+              </ion-chip>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/barrett.jpg">
+            </ion-avatar>
+
+            <!-- badge showing the number of items in cart ie n0 of items customer ordered -->
+            <ion-badge color="secondary" item-end>Read</ion-badge>
+
+            <ion-label style="border-left: 2px solid #00867d;
+              padding-left: 10px;font-family: 'Courier', Times, serif;">
+                <h3>{{pageName}} Lecturer</h3>
+                <p>
+                    Mrs. Juliet Armah
+
+                </p>
+                <p> Message: Could you please submit your labs</p>
+
+            </ion-label>
+        </ion-item>
+
+
+
+
+    </ion-list>
+
+    <div style=" width:90%; text-align:center">
+
+
+        <!-- Algorithm card -->
+        <ion-card style=" width: 250px;
+        display: inline-block;">
+            <img src={{img}}>
+            <ion-card-content>
+                <ion-card-title>
+                    {{pageName}}
+                </ion-card-title>
+                <p style="font-family: 'Courier', Times, serif;">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col></ion-col>
+                            <ion-col>49 seats</ion-col>
+                            <ion-col></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+
+    </div>
+
+    <p style="text-align:center">
+        At the heart of the Ashesi experience is our interdisciplinary core curriculum, and our campus culture. Ashesi students come from 24 countries across the globe to learn, live and innovate together; almost half are on scholarships, and 48% are women. On
+        campus, these students join with faculty and Ashesi leadership on a shared mission to transform the African continent.
+    </p>
+
+
+</ion-content>
+
+
+<ion-footer style="text-align:center; background-color: red">
+    <ion-toolbar>
+        <p>©Ashesi University College</p>
+    </ion-toolbar>
+
+
+
+</ion-footer>
